@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Greetings Section -->
+        <section class="greetings">
+            <h2 class="message">Happy Valentine’s Day, baby! ❤️</h2>
+            <img src="flower.jpg" alt="Favorite Flower" class="flower">
+        </section>
+
+        <!-- Letters Section -->
+        <section class="letters">
+            <h3 class="letters-title">Four letters for you💌</h3>
+            <div class="letter-viewer">
+                <button class="prev" onclick="changeLetter(-1)">❮</button>
+                <img src="letter1.jpg" alt="Letter" class="letter-display" id="currentLetter">
+                <button class="next" onclick="changeLetter(1)">❯</button>
+            </div>
+        </section>
+
+        <!-- Kiss the Cat Section -->
+        <section class="fortune-cat">
+            <h3 class="fortune-title">Tap the cat for a kiss! 🐱💕</h3>
+            <img src="cat.png" alt="Fortune Cat" class="cat" onclick="showFortune()">
+            <p class="fortune-message" id="fortuneText">Tap me to remind you 💖</p>
+        </section>
+
+        <!-- Love Meter Hug Counter -->
+        <section class="hug-counter">
+            <h3 class="hug-title">Love Meter 💖🐱</h3>
+            <img src="cat1.png" alt="Hugging Cat" class="hug-cat" id="hugCat">
+            <p class="hug-count">Hugs sent: <span id="hugCount">0</span> 😽</p>
+
+            <div class="love-meter">
+                <div class="love-progress" id="loveProgress"></div>
+            </div>
+
+            <p class="love-message" id="loveMessage">Send hugs to unlock sweet messages! 💕</p>
+
+            <button class="hug-btn" onclick="sendHug()">Send a Hug 💕</button>
+
+            <!-- Hidden Music Button -->
+            <div id="musicContainer" class="music-container">
+                <button class="play-btn" onclick="playSong()">▶ Play Surprise</button>
+            </div>
+        </section>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
