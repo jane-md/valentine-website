@@ -34,15 +34,25 @@ function showFortune() {
 // Hug Counter Feature
 let hugCount = 0;
 const maxHugs = 10;
+const hugCountDisplay = document.getElementById("hugCount");
+const hugCatImage = document.getElementById("hugCat");
+const loveProgress = document.getElementById("loveProgress");
+const loveMessage = document.getElementById("loveMessage");
+
+const hugImages = [
+    "cat1.png", "cat2.png", "cat3.png", "cat4.png", "cat5.png",
+    "cat6.png", "cat7.png", "cat8.png", "cat9.png", "cat10.png"
+];
 
 function sendHug() {
     if (hugCount < maxHugs) {
         hugCount++;
-        document.getElementById("hugCount").textContent = hugCount;
-        document.getElementById("loveProgress").style.width = `${(hugCount / maxHugs) * 100}%`;
+        hugCountDisplay.textContent = hugCount;
+        hugCatImage.src = hugImages[hugCount - 1]; // Change cat image
+        loveProgress.style.width = `${(hugCount / maxHugs) * 100}%`;
 
         if (hugCount === maxHugs) {
-            document.getElementById("loveMessage").textContent = "You unlocked a special surprise! 🎶";
+            loveMessage.textContent = "You unlocked a special surprise! 🎶";
             document.getElementById("musicContainer").style.display = "block";
         }
     }
